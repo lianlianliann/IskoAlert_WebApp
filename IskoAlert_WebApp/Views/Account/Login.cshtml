@@ -1,0 +1,70 @@
+@{
+    ViewData["Title"] = "Login";
+    Layout = null; // We set null here so we can control the full page background independently
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Iskolar Alert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans antialiased">
+
+    <div class="relative min-h-screen flex items-center justify-center bg-cover bg-center"
+         style="background-image: url('/images/bg-pup.jpg');">
+
+        <div class="absolute inset-0 bg-black/30"></div>
+
+        <div class="relative z-10 w-full max-w-md p-8 rounded-lg shadow-2xl bg-gray-900/90 text-white border border-gray-700">
+
+            <div class="flex flex-col items-center mb-6 text-center">
+                <img src="/images/pup-logo.png" alt="PUP Logo" class="h-16 w-16 mb-3">
+                <h1 class="text-2xl font-bold text-white">Iskolar Alert</h1>
+                <p class="text-yellow-400 font-medium text-sm">Your Safety, Our Priority</p>
+            </div>
+
+            <p class="text-gray-400 text-center mb-6 text-sm">Sign in to start your session</p>
+
+            <form action="#" method="post" class="space-y-4">
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-1">Login As</label>
+                    <select class="w-full bg-gray-800 border border-gray-600 text-white text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block p-2.5">
+                        <option>Student</option>
+                        <option>Faculty</option>
+                        <option>Admin</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-1">PUP Email</label>
+                    <input type="email"
+                           placeholder="your.name@pup.edu.ph"
+                           class="bg-gray-800 border border-gray-600 text-white text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-gray-500"
+                           required="">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-1">Password</label>
+                    <input type="password"
+                           placeholder="Enter your password"
+                           class="bg-gray-800 border border-gray-600 text-white text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 placeholder-gray-500"
+                           required="">
+                </div>
+
+                <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-md text-sm px-5 py-2.5 text-center mt-6">
+                    Sign in
+                </button>
+            </form>
+
+            <div class="mt-6 text-center text-xs text-gray-500">
+                Demo: Use any email and password to login
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
