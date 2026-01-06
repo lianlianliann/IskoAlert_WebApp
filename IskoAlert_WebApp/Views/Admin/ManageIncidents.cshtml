@@ -1,0 +1,130 @@
+@{
+    ViewData["Title"] = "Incident Management";
+    Layout = "_AdminLayout";
+}
+
+<div class="max-w-7xl mx-auto">
+
+    <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+
+        <div class="p-6 border-b border-gray-100">
+            <h2 class="text-lg font-bold text-gray-900 mb-4">Incident Management</h2>
+
+            <div class="flex flex-col lg:flex-row gap-4">
+                <div class="relative flex-grow">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+                    </div>
+                    <input type="text"
+                           class="bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-[#800000] focus:border-[#800000] block w-full pl-10 p-2.5"
+                           placeholder="Search by report ID, reporter, or location...">
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+
+                    <div class="relative w-full sm:w-48">
+                        <select class="w-full bg-white border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-[#800000] focus:border-[#800000] block p-2.5 appearance-none cursor-pointer hover:bg-gray-50 transition-colors">
+                            <option selected>All Status</option>
+                            <option>Pending</option>
+                            <option>Accepted</option>
+                            <option>In-Progress</option>
+                            <option>Resolved</option>
+                            <option>Rejected</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-500">
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </div>
+                    </div>
+
+                    <div class="relative w-full sm:w-48">
+                        <select class="w-full bg-white border border-gray-300 text-gray-700 text-sm rounded-lg focus:ring-[#800000] focus:border-[#800000] block p-2.5 appearance-none cursor-pointer hover:bg-gray-50 transition-colors">
+                            <option selected>All Types</option>
+                            <option>Theft</option>
+                            <option>Vandalism</option>
+                            <option>Harassment</option>
+                            <option>Property Damage</option>
+                            <option>Safety Hazard</option>
+                            <option>Other</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-500">
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left text-gray-500">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 border-b border-gray-100">
+                    <tr>
+                        <th scope="col" class="px-6 py-4 font-bold">Report ID</th>
+                        <th scope="col" class="px-6 py-4 font-bold">Type</th>
+                        <th scope="col" class="px-6 py-4 font-bold">Reporter</th>
+                        <th scope="col" class="px-6 py-4 font-bold">Date Submitted</th>
+                        <th scope="col" class="px-6 py-4 font-bold">Status</th>
+                        <th scope="col" class="px-6 py-4 font-bold">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+
+                    <tr class="bg-white hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 font-medium text-gray-900">#IR-2025-015</td>
+                        <td class="px-6 py-4">Theft</td>
+                        <td class="px-6 py-4">Lian Paredes</td>
+                        <td class="px-6 py-4">1/6/2026</td>
+                        <td class="px-6 py-4">
+                            <span class="bg-green-100 text-green-800 text-xs font-bold px-2.5 py-0.5 rounded border border-green-200">Resolved</span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <button class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-xs px-3 py-1.5 transition-colors">
+                                Review
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr class="bg-white hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 font-medium text-gray-900">#IR-2025-014</td>
+                        <td class="px-6 py-4">Vandalism</td>
+                        <td class="px-6 py-4">Vince Michael Lasam</td>
+                        <td class="px-6 py-4">1/5/2026</td>
+                        <td class="px-6 py-4">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-bold px-2.5 py-0.5 rounded border border-yellow-200">In-Progress</span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <button class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-xs px-3 py-1.5 transition-colors">
+                                Review
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr class="bg-white hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 font-medium text-gray-900">#IR-2025-012</td>
+                        <td class="px-6 py-4">Safety Hazard</td>
+                        <td class="px-6 py-4">John Rich Nicolas</td>
+                        <td class="px-6 py-4">1/3/2026</td>
+                        <td class="px-6 py-4">
+                            <span class="bg-green-100 text-green-800 text-xs font-bold px-2.5 py-0.5 rounded border border-green-200">Resolved</span>
+                        </td>
+                        <td class="px-6 py-4">
+                            <button class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-xs px-3 py-1.5 transition-colors">
+                                Review
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="p-4 border-t border-gray-100 bg-gray-50 flex justify-between items-center">
+            <span class="text-xs text-gray-500">Showing <span class="font-semibold text-gray-900">1</span> to <span class="font-semibold text-gray-900">10</span> of <span class="font-semibold text-gray-900">15</span> Entries</span>
+            <div class="inline-flex gap-2">
+                <button class="px-3 py-1 text-xs font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 disabled:opacity-50">Previous</button>
+                <button class="px-3 py-1 text-xs font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700">Next</button>
+            </div>
+        </div>
+
+    </div>
+</div>
