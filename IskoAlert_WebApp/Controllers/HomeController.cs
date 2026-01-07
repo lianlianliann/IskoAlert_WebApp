@@ -1,18 +1,11 @@
 using System.Diagnostics;
-using IskoAlert_WebApp.Models;
+using IskolarAlert.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IskoAlert_WebApp.Controllers
+namespace IskolarAlert.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
             return View();
@@ -23,6 +16,36 @@ namespace IskoAlert_WebApp.Controllers
             return View();
         }
 
+        public IActionResult Notifications()
+        {
+            return View();
+        }
+
+        public IActionResult ReportIncident()
+        {
+            return View();
+        }
+
+        public IActionResult MyReports()
+        {
+            return View();
+        }
+
+        public IActionResult ReportDetails()
+        {
+            return View();
+        }
+
+        public IActionResult LostAndFound()
+        {
+            return View();
+        }
+
+        public IActionResult ReportLostItem()
+        {
+            return View();
+        }    
+    
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
