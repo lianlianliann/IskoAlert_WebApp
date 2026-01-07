@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace IskolarAlert.Controllers
+namespace IskoAlert_WebApp.Controllers
 {
     public class AdminController : Controller
     {
@@ -9,11 +9,7 @@ namespace IskolarAlert.Controllers
             return View();
         }
 
-        public IActionResult Notifications()
-        {
-            return View();
-        }
-
+        // GET: Admin/ManageIncidents
         public IActionResult ManageIncidents()
         {
             return View();
@@ -24,7 +20,7 @@ namespace IskolarAlert.Controllers
             return View();
         }
 
-        public IActionResult ManageLostFound()
+        public IActionResult ManageLostAndFound()
         {
             return View();
         }
