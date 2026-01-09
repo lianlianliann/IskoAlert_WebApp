@@ -15,31 +15,6 @@ namespace IskolarAlert.Controllers
         {
             return View();
         }
-
-        public IActionResult ReportIncident()
-        {
-            return View();
-        }
-
-        public IActionResult MyReports()
-        {
-            return View();
-        }
-
-        public IActionResult ReportDetails()
-        {
-            return View();
-        }
-
-        public IActionResult LostAndFound()
-        {
-            return View();
-        }
-
-        public IActionResult ReportLostItem()
-        {
-            return View();
-        }    
     
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
